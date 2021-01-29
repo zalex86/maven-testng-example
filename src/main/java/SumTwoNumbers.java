@@ -15,7 +15,7 @@ public class SumTwoNumbers {
      *
      * @throws Exception
      */
-    private void verifyNumberOfArguments() throws Exception {
+    protected void verifyNumberOfArguments() throws Exception {
         String errorMsg = "";
         boolean result = false;
         switch (sArgs.length) {
@@ -40,7 +40,7 @@ public class SumTwoNumbers {
      *
      * @throws NumberFormatException
      */
-    private void parseArgumentsToInt() throws NumberFormatException {
+    protected void parseArgumentsToInt() throws NumberFormatException {
         iArgs = new HashSet<Integer>();
         for (String sArg : sArgs) {
             int iArg = Integer.parseInt(sArg);
@@ -54,7 +54,7 @@ public class SumTwoNumbers {
      * @return int
      * @throws Exception
      */
-    private int addTwoNumbers() throws Exception {
+    protected int addTwoNumbers() throws Exception {
         long sum = 0L;
         for (int arg : iArgs) {
             sum += arg;
