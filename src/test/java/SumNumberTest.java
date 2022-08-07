@@ -26,7 +26,7 @@ public class SumNumberTest {
     @DataProvider(name = "sumTest", parallel = true)
     Object[][] sumDataProvider() {
         return new Object[][] {
-                {10, 30, 40},
+                {10, 50, 40},
                 {0, 0, 0},
                 {-10, 10, 0}
         };
@@ -37,6 +37,10 @@ public class SumNumberTest {
         int sum = SimpleSumNumbs.sumNumbs(arg1, arg2);
         System.out.println(sum);
         assertEquals(sum, expect);
+    }
+
+    @Test(dependsOnMethods = "testSum")
+    void testSkip(){
     }
 }
 
